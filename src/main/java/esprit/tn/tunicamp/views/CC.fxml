@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anch" prefHeight="99.0" onMouseClicked="#showDesc" prefWidth="113.0" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.tn.tunicamp.controllers.CCInfoController">
+    <children>
+        <VBox styleClass="store-item">
+            <Label fx:id="name" styleClass="store-name-label" text="Store Name" />
+            <Label fx:id="location" styleClass="store-location-label" text="Store Location" />
+            <Button onAction="#click" styleClass="choose-button" text="Check" />
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="611.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.tn.tunicamp.controllers.ActivityController">
+   <children>
+      <Pane fx:id="pnlOverview" prefHeight="611.0" prefWidth="764.0">
+         <children>
+      
+            <Button layoutX="280.0" layoutY="14.0" mnemonicParsing="false" onAction="#addForum" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: #4CAF50; /* Green background color */     -fx-text-fill: white; /* White text color */     -fx-font-size: 14px; /* Font size */     -fx-font-weight: bold; /* Font weight */     -fx-padding: 10 20; /* Padding (top, right, bottom, left) */     -fx-border-color: #388E3C; /* Border color */     -fx-border-width: 2px; /* Border width */     -fx-cursor: hand; /* Cursor style */" text="Add Activity">
+      </Button>
+            <ScrollPane layoutX="8.0" layoutY="370.0" prefHeight="214.0" prefWidth="746.0" stylesheets="@../css/Stylesheet.css">
+               <content>
+                  <VBox fx:id="pnAct2" prefHeight="494.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane layoutX="14.0" layoutY="120.0" prefHeight="214.0" prefWidth="746.0" stylesheets="@../css/Stylesheet.css">
+               <content>
+                  <VBox fx:id="pnAct1" prefHeight="214.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Label layoutX="320.0" layoutY="84.0" prefHeight="17.0" prefWidth="95.0" text="My Own Activities" />
+            <Label layoutX="320.0" layoutY="347.0" prefHeight="17.0" prefWidth="111.0" text="Activities I signed for" />
+         </children></Pane>
+   </children>
+</AnchorPane>

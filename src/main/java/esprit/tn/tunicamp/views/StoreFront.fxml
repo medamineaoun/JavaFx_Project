@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="576.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.tn.tunicamp.controllers.StoreFrontController">
+<children>
+    <StackPane prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+        <children>
+            <Pane id="rendrer" fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+                <children>
+                    <TextField layoutX="590.0" layoutY="47.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                    <Label layoutX="57.0" layoutY="25.0" text="Welcome to shop" textFill="#e7e5e5">
+                        <font>
+                            <Font size="24.0" />
+                        </font>
+                    </Label>
+                    <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="178.0" prefHeight="42.0" prefWidth="712.0" spacing="80.0" style="-fx-background-color: #02030A;">
+                        <children>
+                            <Label text="Event Name" textFill="#e7e5e5">
+                                <HBox.margin>
+                                    <Insets left="50.0" />
+                                </HBox.margin>
+                            </Label>
+                            <Label text="Event Date" textFill="#e7e5e5">
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Label>
+                            <Label text="Event Description" textFill="#e7e5e5">
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Label>
+                            <Label text="Max Attendies" textFill="#e7e5e5">
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Label>
+                            <Label text="" textFill="#e7e5e5">
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Label>
+                        </children>
+                    </HBox>
+                    <ScrollPane layoutX="14.0" layoutY="120.0" prefHeight="441.0" prefWidth="746.0" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;">
+                        <content>
+                            <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0" stylesheets="@../css/Stylesheet.css">
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                </rowConstraints>
+                            </GridPane>
+                        </content>
+                        <HBox.margin>
+                            <Insets top="10.0" />
+                        </HBox.margin>
+                    </ScrollPane>
+                    <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/icons8_Search_52px.png" />
+                        </image>
+                    </ImageView>
+                </children>
+            </Pane>
+        </children>
+    </StackPane>
+</children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+/* Store item box */
+.store-item {
+    -fx-background-color: #F9F9F9;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+.store-item:hover {
+    -fx-background-color: #E0E0E0;
+}
+
+.store-name-label {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.store-location-label {
+    -fx-font-size: 14;
+    -fx-text-fill: #666666;
+}
+
+.choose-button {
+    -fx-background-color: #2196F3; /* Material Blue */
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-font-size: 14;
+}
+
+.choose-button:hover {
+    -fx-background-color: #1565C0; /* Darker Material Blue */
+}
