@@ -73,20 +73,37 @@ public class LoginSignupController {
         User loggedInUser = userService.login(username, password);
 
         if (loggedInUser != null) {
-            FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(TuniCamp.class.getResource("views/Dashboard.fxml")));
-            Parent menu = loader.load();
+            if (loggedInUser.getUserType()==UserType.CAMPER){
+                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(TuniCamp.class.getResource("views/Dashboard.fxml")));
+                Parent menu = loader.load();
 
-            CamperDashboardController dashboardController = loader.getController();
+                CamperDashboardController dashboardController = loader.getController();
 
-            dashboardController.setUserData(loggedInUser);
-            dashboardController.initializeWithData();
+                dashboardController.setUserData(loggedInUser);
+                dashboardController.initializeWithData();
 
-            Window currentWindow = content.getScene().getWindow();
-            Stage dashboardStage = new Stage();
-            dashboardStage.setScene(new Scene(menu, 1050.0, 576.0));
-            currentWindow.hide();
-            dashboardStage.getIcons().add(new Image("https://img.icons8.com/pastel-glyph/64/FA5252/tent-in-the-forest.png"));
-            dashboardStage.show();
+                Window currentWindow = content.getScene().getWindow();
+                Stage dashboardStage = new Stage();
+                dashboardStage.setScene(new Scene(menu, 1050.0, 576.0));
+                currentWindow.hide();
+                dashboardStage.getIcons().add(new Image("https://img.icons8.com/pastel-glyph/64/FA5252/tent-in-the-forest.png"));
+                dashboardStage.show();
+            } else if (loggedInUser.getUserType()==UserType.CAMPING_CENTER_OWNER) {
+                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(TuniCamp.class.getResource("views/DashboardCCO.fxml")));
+                Parent menu = loader.load();
+
+                CCODashboardController dashboardController = loader.getController();
+
+                dashboardController.setUserData(loggedInUser);
+                dashboardController.initializeWithData();
+
+                Window currentWindow = content.getScene().getWindow();
+                Stage dashboardStage = new Stage();
+                dashboardStage.setScene(new Scene(menu, 1050.0, 576.0));
+                currentWindow.hide();
+                dashboardStage.getIcons().add(new Image("https://img.icons8.com/pastel-glyph/64/FA5252/tent-in-the-forest.png"));
+                dashboardStage.show();
+            }
         } else {
             ResultText.setText("Login failed. Check your username and password.");
         }
