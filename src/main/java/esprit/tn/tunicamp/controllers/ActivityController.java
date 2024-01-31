@@ -2,6 +2,7 @@ package esprit.tn.tunicamp.controllers;
 
 import esprit.tn.tunicamp.TuniCamp;
 import esprit.tn.tunicamp.entities.Activity;
+import esprit.tn.tunicamp.entities.CampingCenter;
 import javafx.scene.Parent;
 
 import esprit.tn.tunicamp.entities.Post;
@@ -132,4 +133,6 @@ public class ActivityController implements Initializable {
         ActivityController controller = loader.getController();
         controller.setUserData(usr);
     }
+
+
 }
